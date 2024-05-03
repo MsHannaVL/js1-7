@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>index62</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+    let x = prompt("Введите x", );
+    let y = prompt("Введите y", );
+    if (isNaN(x) || x === ''|| x > 1000|| isNaN(y) || y === ''|| y > 1000) {
+        alert("Введено не числовое значение или число больше допустимого");
+        document.getElementsByName("alert").reload(window.location.reload());
+      }
+    else{
+      const mult = (x, y) => x * y;
+      let string = `The multiplying of ${x} and ${y} is ${mult(x, y)}`;
+      alert(string);
+    }
+		</script>
+	</body>
+</html>

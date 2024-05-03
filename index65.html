@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>index65</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+            function mySmart(model,year,price, memory, display, protect)
+            {
+            this.model = model;
+            this.year = year;
+            this.price = price;
+            this.memory = memory;
+            this.display = display;
+            this.protect = protect;
+            
+            this.show = function()
+            {
+                document.write(`Модель - ${this.model}<br>`);
+                document.write(`Год выпуска - ${this.year}<br>`);
+                document.write(`Цена - ${this.price}<br>`);
+                document.write(`Встроенная память - ${this.memory}<br>`);
+                document.write(`Размер экрана - ${this.display}<br>`);
+                document.write(`Защита от влыги и пыли - ${this.protect}<br><br>`);
+            }
+            }
+        let smart1 = new mySmart("Samsung Galaxy S23 Ultra ","2023","2040$","256ГБ","6.8'","IP68" );
+        smart1.show();
+        let smart2 = new mySmart("ASUS ROG Phone 6 Pro","2023","2145$","512ГБ", "6.78'", "IPX4");
+        smart2.show();
+        let smart3 = new mySmart("OnePlus 11 Pro","2023","910$","256ГБ","6.8'", "IP64");
+        smart3.show();
+		</script>
+	</body>
+</html>

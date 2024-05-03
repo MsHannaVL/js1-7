@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>index70</title>
+</head>
+<body>
+  <script type="text/javascript">
+    class Bank {
+      constructor() {
+        this.accounts = [];
+      }
+
+      openAccount(accountHolderName, initialBalance) {
+        const newAccount = {
+          accountHolderName,
+          balance: initialBalance,
+        };
+        this.accounts.push(newAccount);
+        console.log(`Счет "${accountHolderName}" успешно открыт.`);
+      }
+
+      getAccountInfo() {
+        console.log("Информация о счетах:");
+        this.accounts.forEach((account, index) => {
+          console.log(`Счет ${index + 1}:`);
+          console.log(`Имя клиента: ${account.accountHolderName}`);
+          console.log(`Баланс: ${account.balance}`);
+        });
+      }
+    }
+
+    const myBank = new Bank();
+
+    let accountHolderName;
+    let initialBalance;
+
+    while (true) {
+      accountHolderName = prompt("Введите имя клиента:");
+      if (accountHolderName === null) {
+        break;
+      } else if (!/^[A-Za-zА-Яа-яЁё\s]+$/.test(accountHolderName) || accountHolderName.trim() === '') {
+        alert("Некорректные данные. Пожалуйста, повторите ввод(только буквы).");
+        continue;
+      }
+      initialBalance = prompt("Введите начальный баланс счета:");
+      if (initialBalance === null) {
+        break; 
+      } else if (isNaN(parseFloat(initialBalance)) || initialBalance.trim() === '' || initialBalance < 0) {
+        alert("Некорректные данные. Пожалуйста, повторите ввод.");
+        continue;
+      }
+
+      myBank.openAccount(accountHolderName, parseFloat(initialBalance));
+    }
+
+    myBank.getAccountInfo();
+  </script>
+</body>
+</html>

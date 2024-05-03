@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>index64</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+            let mySmart = new Object();
+            mySmart.model = "HONOR 70";
+            mySmart.year = "2023";
+            mySmart.price = "518$";
+            mySmart.memory = "256ГБ";
+            mySmart.display = "6.67";
+            mySmart.protect = "нет данных";
+            mySmart.show = function(){
+                for (let i in mySmart){ 
+                    if (typeof mySmart[i] != 'function')
+                    document.write (`<ul>${i}: ${mySmart[i]}<br></ul>`);
+                }
+            }
+              alert(`Модель - ${mySmart["model"]}`);
+              alert(`Год выпуска - ${mySmart.year}`);
+              alert(`Цена - ${mySmart.price}`);
+              alert(`Память - ${mySmart.memory}`);
+              alert(`Размер экрана - ${mySmart.display}`);
+              alert(`Защита от влыги и пыли - ${mySmart.protect}`);
+              mySmart.show();
+		</script>
+	</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+  <html>
+    <head>
+    <title>index69</title>
+    </head>
+    <body>
+      <script type="text/javascript">
+        class Student {
+            constructor(name, age, averageGrade) {
+                this.name = name;
+                this.age = age;
+                this.averageGrade = averageGrade;
+            }
+            getInfo() {
+                console.log(`Имя: ${this.name}, Возраст: ${this.age}, Средний балл: ${this.averageGrade}`);
+            }
+        }
+        const student1 = new Student("Анна", 26, 5.0);
+        const student2 = new Student("Андрей", 35, 9.2);
+        const student3 = new Student("Михаил", 53, 8.7);
+
+        const group = [student1, student2, student3];
+
+        group.forEach((student, index) => {
+            console.log(`Студент ${index + 1}:`);
+            student.getInfo();
+        });
+       </script>
+    </body>
+  </html>

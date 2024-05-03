@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>index63</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+
+    function createOAuthString(host, clientID, scope) {
+      return `${host}/login/oauth/authorize?client_id=${clientID}&scope=${scope}`
+    }
+    function  setID() {
+    let clientID = prompt('Введите clientID', );
+      if (clientID.trim() == '')
+        return `MsHannaVL`;
+      else
+        return clientID;
+    }
+    document.write(`<a href="${createOAuthString('https://github.com/MsHannaVL',setID(),'repo,user')}">Динамический URL, нажмите, чтобы перейти</a> `);
+		</script>
+	</body>
+</html>
